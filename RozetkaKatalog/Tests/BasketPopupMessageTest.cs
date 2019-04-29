@@ -49,9 +49,6 @@ namespace RozetkaCatalog.Tests
             foreach (var textItem in searchTextOnPopupMessageButton)
             {
                 Console.WriteLine(textItem.Text.Trim());
-                //Assert.True(textItem.Text.Contains(getTitleTextMessage) || textItem.Text.Contains(getBodyTextMessage),
-                //   $"Element '{basketPage.searchTextOnPopupMessageButton}' is not present on the page as expected");
-                //todo REFACTORING
                 Assert.True(textItem.Text.Trim().ToLower().Contains(titleTextMessage.Trim().ToLower()) || textItem.Text.Trim().ToLower().Contains(bodyTextMessage.Trim().ToLower()),
                    $"Element '{basketPage.searchTextOnPopupMessageButton}' is not present on the page as expected");
             }
